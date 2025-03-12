@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="fronend.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>SIP Calculator</h2>
+
+        <label>Enter Investment Amount:</label>
+        <input type="number" id="sipAmount" value="5000">
+
+        <label>Duration (Years): <span id="yearValue">5</span></label>
+        <input type="range" id="years" min="1" max="30" value="5">
+
+        <label>Interest Rate (%): <span id="rateValue">12</span></label>
+        <input type="range" id="rate" min="1" max="20" value="12">
+
+        <label>Select Currency:</label>
+        <select id="currency">
+            <option value="INR">₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="EUR">€ EUR</option>
+            <option value="GBP">£ GBP</option>
+        </select>
+
+        <div class="result">
+            <p><strong>Total Investment:</strong> <span id="totalInvestment">₹ 300000.00</span></p>
+            <p><strong>Estimated Returns:</strong> <span id="totalReturns">₹ 520000.00</span></p>
+            <p><strong>Maturity Amount:</strong> <span id="maturityAmount">₹ 820000.00</span></p>
+        </div>
+
+        <canvas id="sipChart"></canvas>
+    </div>
+
+    <script src="backen.js"></script>
+
+</body>
+</html>
